@@ -19,4 +19,4 @@ var Person = function(first_name, last_name, email, age) {
   this.full_name = compute_full_name(first_name, last_name);
   this.email = String(email);
   this.age = parseInt(age);
-}
+};
