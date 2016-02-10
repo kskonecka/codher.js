@@ -22,3 +22,5 @@ function remove_from_array(value, array) {
 
 remove_from_array("Magenta", colors);
 console.log(colors);
+
+// map?
