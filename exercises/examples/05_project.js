@@ -1,17 +1,17 @@
 var friends = [];
 
-function compute_full_name(first_name, last_name) {
+var compute_full_name = function(first_name, last_name) {
   return String(first_name) + " " + String(last_name);
-}
+};
 
-function add_friend() {
+var add_friend = function() {
   var first_name = prompt("First name: ");
   var last_name = prompt("Last name: ");
   var age = prompt("Age: ");
   var email = prompt("Email: ");
   friends.push(new Person(first_name, last_name, email, age));
   console.log(friends);
-}
+};
 
 var Person = function(first_name, last_name, email, age) {
   this.first_name = String(first_name);
