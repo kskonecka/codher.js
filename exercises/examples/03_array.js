@@ -7,20 +7,19 @@ colors.push("Yellow");
 console.log(colors);
 
 // Let's add many colors
-colors.push("Magenta");
+colors.push("Potato");
 colors.push("Blue");
 colors.push("Purple");
 console.log(colors);
 
 // Let's remove a specific value
-function remove_from_array(value, array) {
-  var index = array.indexOf(value);
+var remove_from_array = function(needle, haystack) {
+  var index = haystack.indexOf(needle);
   if(index > -1) {
-    array.splice(index, 1);
+    haystack.splice(index, 1);
   }
-}
+};
 
-remove_from_array("Magenta", colors);
+// Wait, potato is not a color
+remove_from_array("Potato", colors);
 console.log(colors);
-
-// map?

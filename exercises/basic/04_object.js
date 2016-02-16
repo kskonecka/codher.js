@@ -1,3 +1,5 @@
+// Automatically generate a full name and initials for a person
+
 var Person = function(first_name, last_name, email, age) {
   var full_name = function(_first_name, _last_name) {
     return _first_name + " " + _last_name;
