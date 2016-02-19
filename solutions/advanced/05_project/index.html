@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <title>My Address Book</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Little Address Book</h1>
+    </header>
+    <main>
+      <h2>My New Friends</h2>
+      <ul id="friends_list"></ul>
+      <button type="button" name="add_friend" onclick="add_new_friend();">Add a Friend</button>
+    </main>
+    <footer>
+      &copy; Codher, 2016
+    </footer>
+    <script type="text/javascript" src="05_project.js"></script>
+    <script type="text/javascript">
+      // Seed Data
+      // TO DO: Paste your JSON formatted friends here
+      var seed = '[{"id":1,"first_name":"James","last_name":"Bond","full_name":"James Bond","age":39,"email":"[redacted]"},{"id":2,"first_name":"Dora","last_name":"the Explorer","full_name":"Dora the Explorer","age":5,"email":"dora@explorers.org"},{"id":3,"first_name":"Charles","last_name":"Brown","full_name":"Charles Brown","age":10,"email":"charliebrown@peanuts.com"},{"id":4,"first_name":"Mickey","last_name":"Mouse","full_name":"Mickey Mouse","age":120,"email":"mickey@disney.com"}]';
+
+      // Get the seed data and add it to
+      JSON.parse(seed).forEach(function(item) {
+        friends.push(item);
+      });
+
+      // Show our newly generated friends list
+      refreshList(friends);
+    </script>
+  </body>
+</html>

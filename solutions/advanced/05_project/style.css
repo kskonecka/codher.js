@@ -1,0 +1,30 @@
+* {
+  font-family: "Helvetica", sans-serif;
+}
+
+header {
+  background: #ed6161;
+  color: #fff;
+  font-weight: bold;
+  padding: 24px;
+  text-align: center;
+}
+
+main {
+  padding: 24px;
+}
+
+main ul {
+  padding-left: 0;
+}
+
+main ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  border-top: 1px solid #c0c0c0;
+}
