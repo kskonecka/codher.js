@@ -1,4 +1,5 @@
 // Add many friends and then figure out which ones are old enough to drink in Denmark.
+
 // Seed Data
 var friends = [{
   id: 1,

@@ -1,4 +1,5 @@
 // Add "Harry Potter and the " to the beginning of all book titles
+// HINT use the .forEach() method of the array
 // Seed data:
 var books = [
   "Philosopher's Stone",
