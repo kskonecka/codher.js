@@ -4,7 +4,7 @@
 This repository contains the materials used in all of [Codher](http://www.codher.com)'s Javascript workshops.
 
 ##Workshops
-- [February 2016: Introduction](/tree/master/201602_introduction)s
+- [February 2016: Introduction](201602_introduction/)
 
 ##Recommended Resources
 - [Codecademy Javascript Course](https://www.codecademy.com/learn/javascript)
