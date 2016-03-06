@@ -1,42 +1,18 @@
-# Codher Introduction to Javascript
-_February 20 & 21st, 2016_
+#Codher.js
 
-## Agenda
-- Conceptual Introduction to Programming
-- Getting Dirty With Javascript
-- What is JSON?
-- Using Javascript in Websites
+##About
+This repository contains the materials used in all of [Codher](http://www.codher.com)'s Javascript workshops.
 
-## Slides
-[Download here](https://docs.google.com/presentation/d/1kFqedrZA43g9SCvanwLOKH7iHEKJ9JJBc3W7goxgMKE/edit?usp=sharing)
+##Workshops
+- [February 2016: Introduction](/tree/master/201602_introduction)s
 
-## Exercises
-All the examples we talked about can be found in the directory called _examples_. Once we've finished try to do the basic and advanced exercises for each topic. You can find the solutions in the _solutions_ directory, but no peeking before trying!
+##Recommended Resources
+- [Codecademy Javascript Course](https://www.codecademy.com/learn/javascript)
+- [Javascript for Cats](http://jsforcats.com/)
+- [Eloquent Javascript](http://eloquentjavascript.net/)
 
-### Strings
-- **Basic**: Create a function that returns the initials of a person
-- **Advanced**: Create a function that validates that the user inputs both a first name and last name and that they are strings
 
-### Numbers
-- **Basic**: Build a small calculator function BONUS: Learn how to round/up down decimals
-- **Advanced**: Create a function than sums any amount of numbers, validate that the user only inputs numbers
-
-### Arrays
-- **Basic**: Create a function that removes all instances of a given text from an array
-- **Advanced**: Add "Harry Potter and the " to the beginning of all book titles. Use the seed data found in the file exercises/advanced/03_array.js
-
-### Objects
-- **Basic**: Automatically generate a full name and initials for a person
-- **Advanced**: Create an adopt function that updates a child's last name to their new parent's
-
-### Project
-- **Basic**: Add many friends and then figure out which ones are old enough to drink in Denmark. Use the seed data found in the file exercises/basic/05_project.js
-- **Advanced**: Make a small website that displays a list of friends and their emails. Add a button that allows the user to add a new friend
-
----
-
-## License
-
+##License
 The MIT License (MIT)
 
 Copyright (c) 2016, [Codher](http://www.codher.com)
