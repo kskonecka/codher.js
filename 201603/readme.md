@@ -1,18 +1,19 @@
-#Codher.js
+# Codher.js March 2016 workshop
 
-##About
-This repository contains the materials used in all of [Codher](http://www.codher.com)'s Javascript workshops.
+## Previous evaluation
+In order to help the students the best, we'll group them based on how much they remember from the last workshop.
+Take the test [here](https://repl.it/BvXw)
 
-##Workshops
-- [February 2016: Introduction](201602_introduction/)
-- [March 2016](201603/)
+## Installing Atom
+For this workshop we will use the Atom text editor and some packages
+Go to https://atom.io/ to download and install the editor
 
-##Recommended Resources
-- [Codecademy Javascript Course](https://www.codecademy.com/learn/javascript)
-- [Javascript for Cats](http://jsforcats.com/)
-- [Eloquent Javascript](http://eloquentjavascript.net/)
-- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
+## Installing Atom packages
+For each one of these packages, follow the instructions on their packages
+- **Linter**: Keeps track of your code style and provides suggestions when there are syntax errors https://atom.io/packages/linter
+- **Linter-jshint**: Javascript support for Linter https://atom.io/packages/linter-jshint
+- **Script-runner**: REPL-like code execution in the text editor https://atom.io/packages/script-runner
+- **Atom-live-server**: Launches a simple development server with livereload capabilities https://atom.io/packages/atom-live-server
 
 ##License
 The MIT License (MIT)
