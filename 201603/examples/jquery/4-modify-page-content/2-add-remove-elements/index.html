@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>id demo</title>
+  <style>
+  /*CSS can be added here*/
+  body{
+    background-color: #303036; /*dark gray, with a tint of blue*/
+  }
+  .circle {
+    /*we use inline-block to have the div's stand side-by-side*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /*this turns our div's background  from a 100x100 square to a circle*/
+    border-radius: 50%;
+    background-color: #efefef; /*a boring gray*/
+
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+</head>
+
+<body>
+  <div id="circle-container">
+  </div>
+  <button id="button-add" type="text">Add circle</button>
+  <button id="button-remove" type="text">Remove Circle</button>
+<script>
+/*JavaScript can be added here*/
+function addCircle(){
+
+  /*
+   * We create a new element by writing <element-type />, in this case <div />.
+   *
+   *  The second argument is an object where each property is an attribute
+   *  of the element, hence for our div, an object with {class: "circle"} gives
+   *  an element, <div class="circle">.
+   */
+  var new_circle = $("<div />", {
+    class: "circle"
+  });
+
+  /* Matches our <div class="circle-container"> and appends (that is, adds to
+   * the end) the new <div> element.
+   */
+  $("#circle-container").append(new_circle);
+}
+$("#button-add").on('click', addCircle);
+
+// We add a function to listen for clicks on the remove button.
+// This function, however, isn't given a name, but defined inside the call
+// -- such functions have a fancy name 'anonymous functions' - but are otherwise
+//    completely normal.
+$("#button-remove").on('click', function(){
+  /* Removing an element
+   * -------------------
+   * .remove() simply removes all matched elements completely from the DOM
+   *   (document object model - that is, the model of the HTML page).
+   *
+   * The hard part is the selector, let's break it down.
+   * 'div p'
+   *  => "match child <p> elements under a <div> element"
+   * a:last-child
+   *  => "match the last <a> child of <a>'s parent"
+   *
+   * In this case, the parent of all div.circle's is div#circle-container
+   * So we're saying:
+   * "Match the last <div class="circle"> whose a child of an element whose id
+   * is 'circle-container' (in this case, <div id="circle-container">)
+   */
+  $("#circle-container div.circle:last-child").remove();
+});
+</script>
+
+</body>
+</html>

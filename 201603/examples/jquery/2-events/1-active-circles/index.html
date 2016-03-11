@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>id demo</title>
+  <style>
+  /*CSS can be added here*/
+  body{
+    background-color: #303036; /*dark gray, with a tint of blue*/
+  }
+  .circle {
+    /*we use inline-block to have the div's stand side-by-side*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /*this turns our div's background  from a 100x100 square to a circle*/
+    border-radius: 50%;
+    background-color: #efefef; /*a boring gray*/
+    font-size: 20px;
+  }
+
+  /*style all p (paragraph) elements inside elements with the 'circle' class */
+  .circle p {
+    text-align: center;
+    vertical-align: middle;
+    /*the same as the circle's height, to ensure we centre
+    the text vertically*/
+    line-height: 100px;
+
+
+    color: #000000;
+    margin: 0px; /*the margin pushes the text down off-centre*/
+  }
+  .active-circle {
+    font-size: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FF8400;
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+</head>
+
+<body>
+  <div class="circle"><p>1</p></div>
+  <div class="circle"><p>2</p></div>
+  <div class="circle"><p>3</p></div>
+  <div class="circle"><p>4</p></div>
+<script>
+/*JavaScript can be added here*/
+
+function onClick() {
+  //Multiple elements may trigger this, but which got triggered ?
+
+  // ITurns out, JQuery Event functions are called with the 'this' variable
+  // being set to the element which triggered the event.
+
+  //Let's get the element which triggered the event.
+  var element = this;
+  // Wrap it in $() (a shorter way to call the jQuery() function) to get a
+  // JQuery element.
+  $(element).addClass("active-circle");
+}
+
+//matches all <div>'s with class "circle" - so we'll get a set of elements back
+$("div.circle").on("click", onClick);
+
+
+</script>
+
+</body>
+</html>

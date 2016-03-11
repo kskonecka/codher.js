@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>id demo</title>
+  <style>
+  /*CSS can be added here*/
+  body{
+    background-color: #303036; /*dark gray, with a tint of blue*/
+  }
+  .circle {
+    /*we use inline-block to have the div's stand side-by-side*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /*this turns our div's background  from a 100x100 square to a circle*/
+    border-radius: 50%;
+    background-color: #efefef; /*a boring gray*/
+    font-size: 20px;
+  }
+
+  /*style all p (paragraph) elements inside elements with the 'circle' class */
+  .circle p {
+    text-align: center;
+    vertical-align: middle;
+    /*the same as the circle's height, to ensure we centre
+    the text vertically*/
+    line-height: 100px;
+
+
+    color: #ffffff;
+    margin: 0px; /*the margin pushes the text down off-centre*/
+  }
+  .active-circle {
+    font-size: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #efefef;
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+</head>
+
+<body>
+  <div class="circle"><p>1</p></div>
+  <div class="middle circle"><p>2</p></div>
+  <div id="third-circle" class="circle"><p>3</p></div>
+<script>
+/*JavaScript can be added here*/
+var color_blue = "#009ED8";
+var color_red = "#FE5F55";
+var color_green = "#139675";
+
+// 1) try to colour each circle using jquery and CSS selectors to access
+//    the divs.
+//    HINT: you could start by colouring all divs and then use the class
+//          and id attributes to give those two div's unique colours.
+//    HINT#2 - look & play with the examples in examples/jquery/1-select-elements
+//             for inspiration.
+
+// 2) Styling in response to user interaction
+//    ---------------------------------------
+//    We want to change the look of the circles in response to the user clicking
+//    on them - to this end, we'll need to listen to the 'click' event and
+//    modify the styling of the circles in response.
+
+//    HINT#1, reacting to clicks sound like dealing with events, dig through
+//            'examples/jquery/2-events' to figure out how to call 'onClick'
+
+//    HINT#2, styling - you'll need to determine if the element already has
+//            the 'active-circle' class to figure out if you need to add it
+//            or not.
+//            Look in examples/jquery/1-select-elements for examples which work
+//            with css classes
+
+
+</script>
+
+</body>
+</html>

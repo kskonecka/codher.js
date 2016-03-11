@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+
+This example changes CSS styling by adding, removing and detecting CSS classes.
+
+To make the demo interactive (and easier to follow) we use events - so be sure
+to read about those first before trying to tackle this.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>demo - changing css classes</title>
+  <style>
+  /*CSS can be added here*/
+  body {
+    background-color: #59554E;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .circle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #E2E3D9;
+    background-size: 100px;
+
+    /*create a border - technically same colour as the background
+      - we do this now so the element isn't moving once we want to show
+        an actual border of a different colour.*/
+    border-style: solid;
+    border-width: 5px;
+    border-color: #E2E3D9;
+  }
+  .cat-hover {
+    /*change border colour & show a cat because why not*/
+    background-image: url(img/scottish-fold.jpg);
+    border-color: #A1C1BE;
+  }
+  .dog-hover {
+    background-image: url(img/shiba2.jpg);
+    border-color: #A1C1BE;
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+</head>
+<body>
+
+<div id="cat-circle" class="circle"></div>
+<div id="dog-circle" class="circle"></div>
+<script>
+/*JavaScript can be added here*/
+
+//Could do this a bit smarter - we'll see some event examples showing this
+function hoverIn() {
+  $("#cat-circle").addClass("cat-hover");
+}
+function hoverOut() {
+  $("#cat-circle").removeClass("cat-hover");
+}
+$("#cat-circle").on("mouseenter", hoverIn);
+$("#cat-circle").on("mouseleave", hoverOut);
+
+function toggleDog() {
+  // there's a smarter way to get the dog circle
+  // element from inside the event function - see examples in
+  // 'examples/jquery/events'
+  var element = $("#dog-circle");
+
+  // we ask if the element already has the 'dog-hover' class
+  // and if so, we remove it, otherwise, we add it to the element.
+  //
+  // This way, we toggle the dog picture on and off between clicks.
+  if (element.hasClass("dog-hover")) {
+    element.removeClass("dog-hover");
+  } else {
+    element.addClass("dog-hover");
+  }
+}
+$("#dog-circle").on("click", toggleDog);
+
+</script>
+
+</body>
+</html>

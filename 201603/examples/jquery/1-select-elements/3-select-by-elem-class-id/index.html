@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>demo page</title>
+  <style>
+  /*CSS can be added here*/
+  body {
+    background: white;
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="odd">
+    First!
+  </div>
+  <div class="even">
+    Second!
+  </div>
+  <div class="odd" id="active">
+    Third!
+  </div>
+  <div class="even">
+    Fourth!
+  </div>
+  <script>
+  /*JavaScript can be added here*/
+
+  
+  // Standard colours ('red', 'blue', 'yellow', ...) are *way* too ugly -
+  // let's define some variables with some nicer colours
+  // (Feel free to look at http://www.colourlovers.com for inspiration)
+  var very_dark_grey = "#424242"
+  var dark_grey = "#BCBCBC";
+  var light_grey = "#E9E9E9";
+  var green = "#66BC65";
+
+  //set the background-color for the <body> tag
+  $("body").css("background-color", very_dark_grey);
+
+  //set the background-color for all <div> elements which has: class="even"
+  $("div.even").css("background-color", light_grey);
+
+  //set the background-color for all <div> elements which has: class="odd"
+  $("div.odd").css("background-color", dark_grey);
+
+  // notice how these CSS rules only apply to the div which has: id="active"
+  $("div#active").css("background-color", green);
+  $("div#active").css("font-family", "Open Sans");
+  $("div#active").css("color", "white");
+  </script>
+</body>
+</html>

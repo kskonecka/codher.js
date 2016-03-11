@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>get and set element content</title>
+  <style>
+  /*CSS can be added here*/
+  .page-width {
+    min-width: 300px;
+    width: 300px;
+  }
+  ul {
+    list-style: none;
+  }
+
+  ul.horizontal {
+    list-style: none;
+    padding-left: 0px; /*don't indent elements of the list*/
+    display: inline-block;
+  }
+  ul.horizontal li {
+    display: inline-block;
+  }
+
+  #copy-text span, #copy-input span {
+    /*inline elements won't respect a minimum size, hence inline-block*/
+    display: inline-block;
+    min-height: 1.3em;
+    width: 100%;
+    background-color: yellow;
+  }
+  .horizontal button {
+    display: inline;
+  }
+
+  #copy-input input {
+    display: block;
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+</head>
+<body>
+<ul id="copy-input">
+  <li><input class="page-width" type="text" placeholder="please write something :)"/></li>
+  <li><span><!--output goes here--></span></li>
+  <li><button type="button">Copy Input</button></li>
+</ul>
+
+<ul id="copy-text">
+  <li><p>If all programmers had to know CSS; this programmer would be out of a job!</p></li>
+  <li><span><!--output goes here--></span></li>
+  <li><button type="button">Copy Text</button></li>
+</ul>
+
+
+<script>
+/*JavaScript can be added here*/
+$("#copy-input button").on('click', function() {
+  /*select all <input> elements nested under #copy-input (just the one)*/
+  var input = $("#copy-input input");
+  /*NB - the value of an input field is retrieved by the function val()
+   * documentation: http://api.jquery.com/val/
+   */
+  $("#copy-input span").text(input.val());
+});
+
+$("#copy-text button").on('click', function() {
+  var element = $("#copy-text p");
+  /*NB - The function to both retrieve content from <button>, <p> etc is text()
+   *     If no arguments are given, you'll get the text contents of the selected
+   *     element.
+   *     IF you pass an argument, you'll be setting the text contents of the
+   *     element to argument value.
+   *
+   *     Read more: http://api.jquery.com/text/
+   */
+  $("#copy-text span").text(element.text());
+});
+
+</script>
+
+</body>
+</html>
