@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TO-DO</title>
+  <style>
+  /*CSS can be added here*/
+  .task-done {
+    text-decoration: line-through;
+    color: #413D3D;
+  }
+  </style>
+  <script src="js/jquery-2.2.1.js"></script>
+</head>
+<body>
+
+<h1>The glorious to-do list!</h1>
+<ul id="task-list">
+  <li>Shop for the weekend</li>
+  <li>Install the Atom editor</li>
+  <li>pull down the curtains</li>
+  <li>code the weekend away!</li>
+</ul>
+<input id="task-description" type="text" placeholder="Enter the new task"/>
+<button id="task-add">Add Task!</button>
+<script>
+/*JavaScript can be added here*/
+
+// 1) Removing tasks
+// -----------------
+//
+// We'd like to remove tasks. Click once to cross them off
+// (use the 'task-done' class), click once more to remove the item entirely.
+//
+// #HINT - try to think this through, how do you know if an item has been
+//         clicked once already ? How do you act on it?
+$("#task-list li").on("click", function() {
+  var element = $(this);
+  if (element.hasClass("task-done")) {
+    //user clicked on a "done" task, remove it entirely!
+    element.remove();
+  } else {
+    element.addClass("task-done");
+  }
+});
+
+// 2) Adding tasks
+// ---------------
+//
+// We'd like to be able to add new tasks. We expect the user to write out
+// the task in the input field and then hit the button to add it to the list.
+//
+$("#task-add").on('click', function(){
+  // create a new element
+  var new_task = $("<li />");
+  // add some text as the element's content
+  new_task.text($("#task-description").val());
+
+  // finally, append it to (add it to the end of) the task list
+  $("#task-list").append(new_task);
+
+  // clear the input field in preparation for a new task
+  $("#task-description").val("");
+});
+</script>
+
+</body>
+</html>
