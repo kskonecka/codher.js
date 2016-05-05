@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example 02 - User Input</title>
+    <!-- Common resources -->
+    <link rel="stylesheet" href="../../common/css/normalize.css" media="screen">
+    <link rel="stylesheet" href="../../common/css/app.css" media="screen">
+    <script src="../../common/js/jquery-2.2.1.js"></script>
+  </head>
+  <body>
+    <div id="main-content">
+      <header>
+        <h1>Example 02 - User Input</h1>
+      </header>
+      <main>
+        <p>
+          In this example we will use some user's input to get information from
+          another API and display it.
+        </p>
+        <hr>
+        <form class="number-form" action="/" method="get">
+          <label for="user-input">Enter your favourite number: </label>
+          <input type="number" name="user-input" class="user-input">
+          <input type="submit" name="submit" value="Submit">
+        </form>
+        <p class="alert success number-fact hidden">
+          <!-- We'll use this div to display the number fact -->
+        </p>
+        <p class="alert error number-error hidden">
+          <!-- We'll use this div to display any errors -->
+        </p>
+        <hr>
+        <!-- TODO: Add another form that asks for a number and displays -->
+        <!-- that many Chuck Norris' jokes below it -->
+      </main>
+      <footer>
+        Copyright (c) 2016 Codher
+      </footer>
+    </div>
+    <!-- Your app's javascript -->
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
