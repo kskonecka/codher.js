@@ -151,6 +151,10 @@ form input[type=number] {
   display: none;
 }
 
+.apod-image {
+  width: 100%;
+}
+
 footer {
   padding: 24px;
   text-align: center;

@@ -1,5 +1,6 @@
 // Go to https://api.nasa.gov/index.html#apply-for-an-api-key and get
 // your own API key, replace the value of key with it
+// TODO: Get your own API Key
 var key = 'DEMO_KEY';
 
 function fetchAPOD(date) {
