@@ -1,0 +1,162 @@
+* {
+  font-family: "Helvetica", sans-serif;
+}
+
+header {
+  background: #ed6161;
+  color: #fff;
+  font-weight: bold;
+  padding: 24px;
+  text-align: center;
+}
+
+nav {
+  color: #fff;
+  width: 250px;
+  box-sizing: border-box;
+  background-color: #555;
+  border-right: 2px solid #333;
+  position: fixed;
+  padding: 24px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+#main-content {
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+#main-content.push {
+  left: 250px;
+}
+
+.menu-toggle {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+.section-title {
+  display: inline-block;
+}
+
+nav.hidden {
+  left: -250px;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-bottom: 12px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 24px;
+}
+
+main ul {
+  padding-left: 0;
+}
+
+main ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.controls {
+  width: 40%;
+}
+
+.controls .songlist a {
+  color: #333;
+  text-decoration: none;
+}
+
+.controls .songlist a:hover {
+  color: #ed6161;
+}
+
+.video-player {
+  width: 60%;
+  text-align: center;
+}
+
+code {
+  display: inline-block;
+  vertical-align: middle;
+  background: #fcfcfc;
+  padding: 2px 4px;
+  border: 1px solid #cfcfcf;
+}
+
+form input,
+form label {
+  padding: 6px;
+}
+
+form input[type=submit] {
+  padding: 8px;
+}
+
+form input[type=number] {
+  text-align: right;
+}
+
+.alert {
+  border: 1px solid #333;
+  padding: 24px;
+}
+
+.error {
+  background: #ffa6a6;
+  border-color: #d06060;
+  color: #9e0e0e;
+}
+
+.warning {
+  background: #fcf7aa;
+  border-color: #8b7900;
+  color: #958d1f;
+}
+
+.success {
+  background: #ace08b;
+  border-color: #185e17;
+  color: #3f7512;
+}
+
+.hidden {
+  display: none;
+}
+
+.apod-image {
+  width: 100%;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  border-top: 1px solid #c0c0c0;
+}
