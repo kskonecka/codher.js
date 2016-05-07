@@ -13,6 +13,7 @@ function fetchNumberFact(number) {
     // Note how this API doesn't have a value array in the respone like the
     // previous one, each API will be different - that's why documentation
     // is important
+    console.log(data);
     $('.number-fact').html(data).removeClass('hidden');
   })
   .fail(function(xhr, status, error) {

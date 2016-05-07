@@ -28,7 +28,21 @@ function fetchNumberFact(number) {
 }
 
 // HINT: You'll probably want to make a new function for the Chuck Norris request
+function getNorrisJoke(numberNorris){
+  $('.norris-joke').html('').addClass('hidden');
+  $('.norris-error').html('').addClass('hidden');
 
+  $.get('http://api.icndb.com/jokes/random/' + numberNorris)
+  .done(function(norrisData) {
+    var ul = $("<ul>");                            //creates list
+    for (var i = 0; i < norrisData.value.length; i++) { //for every value
+      var li = $('<li>');                         //create a li element
+      li.html(norrisData.value[i].joke);                // insert a joke in li
+      ul.append(li);                              //attach it to a list
+    }  //forLoop
+    $('.norris-joke').append(ul).removeClass('hidden');
+  }) //done
+}
 
 // We use $(document).ready() to make sure that all our html has been rendered
 // before we try to add behaviour to it
@@ -44,6 +58,12 @@ $(document).ready(function() {
     // the fetchNumberFact function we previously defined
     var number = $('.user-input').val();
     fetchNumberFact(number);
+  });
+
+  $('.chuck-norris-form').submit(function(e) {
+    e.preventDefault();
+    var numberNorris = $('.user-input-norris').val();
+    getNorrisJoke(numberNorris);
   });
 
   // HINT: You'll probably want to bind a similar action to the new form's
