@@ -35,7 +35,8 @@ function getNorrisJoke(numberNorris){
   $.get('http://api.icndb.com/jokes/random/' + numberNorris)
   .done(function(norrisData) {
     var ul = $("<ul>");                            //creates list
-    for (var i = 0; i < norrisData.value.length; i++) { //for every value
+    // debugger;
+    for (var i = 0; i < numberNorris; i++) { //for every value
       var li = $('<li>');                         //create a li element
       li.html(norrisData.value[i].joke);                // insert a joke in li
       ul.append(li);                              //attach it to a list

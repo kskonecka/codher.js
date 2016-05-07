@@ -19,17 +19,18 @@
         </p>
         <hr>
         <form class="apod-form" action="/" method="get">
-          <label for="user-input">Enter a date after 1995-06-16: </label>
+          <label for="user-input">Enter a number between 0 and 19: </label>
           <input type="text" name="user-input" class="user-input">
           <input type="submit" name="submit" value="Submit">
         </form>
         <p class="alert error apod-error hidden">
           <!-- We'll use this div to display any errors -->
         </p>
-        <figure class="image-container hidden">
-          <img class="apod" src="" alt="" />
+        <div class="image-container hidden">
+          <img class="apod" src=""/>
           <figcaption class="apod-caption"></figcaption>
-        </figure>
+          <figcaption class="apod-caption-2"></figcaption>
+        </div>
       </main>
       <footer>
         Copyright (c) 2016 Codher

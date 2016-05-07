@@ -1,6 +1,6 @@
 // Go to https://api.nasa.gov/index.html#apply-for-an-api-key and get
 // your own API key, replace the value of key with it
-var key = 'DEMO_KEY';
+var key = 'DrSG4VuHXtHuOC1oOQoE6mmvQ2NOI4481j3vZE7c';
 
 function fetchAPOD(date) {
   $('.apod-error').text('').addClass('hidden');
