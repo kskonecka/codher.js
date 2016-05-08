@@ -7,7 +7,7 @@ function fetchTweets() {
       var tweet = $('<div/>').addClass('tweet');
       var date = new Date(item.timestamp);
       tweet.append($('<a href="single_tweet.html?id=' + key +'"></a>').addClass('date').text(date.toUTCString()));
-      tweet.append($('<div/>').addClass('content').text(item.content));
+      tweet.append($('<div/>').addClass('content').html(item.content));
       tweet.append($('<div/>').addClass('author').text('-' + item.author));
       $('.tweets').prepend(tweet);
     }
