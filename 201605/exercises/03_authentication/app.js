@@ -23,7 +23,7 @@ function fetchAPOD(number) {
   })
   .fail( function(xhr, status, error) {
     $('.apod-error').text(error).removeClass('hidden');
-    
+
   });
 }
 
@@ -42,6 +42,7 @@ function insertContent(movies) {
   // $('.apod-caption').html("");
   var randomNumber = Math.floor(Math.random() * 6) + 1;
 
+//that loop seems way unnecesarry, yet js doesnt work without it
   $.each(movies, function(indexMovie, movie) {
     $('.apod-caption').html("");
 
