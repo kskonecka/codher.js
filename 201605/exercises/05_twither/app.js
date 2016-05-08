@@ -36,6 +36,9 @@ function addTweet() {
        content: getTweet
     }).done(function(data){
       console.log(data.success);
+      fetchTweets();
+      var getName = $(".user-name").val("");
+      var getTweet = $('textarea').val("");
     }).fail(function(error){
       console.log(error);
     });
@@ -45,6 +48,6 @@ function addTweet() {
 
 
 $(document).ready(function() {
-  window.setInterval(fetchTweets, 5000);
+  fetchTweets();
   addTweet();
 });

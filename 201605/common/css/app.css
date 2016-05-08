@@ -1,13 +1,18 @@
 * {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
-  background: #ed6161;
+  background: #015249;
   color: #fff;
   font-weight: bold;
-  padding: 24px;
-  text-align: center;
+  padding: 50px;
+  text-align: left;
+}
+h1 {
+  font-family: sans-serif;
+  font-size: 80px;
+  
 }
 
 nav {
@@ -117,7 +122,11 @@ form label {
 }
 
 form input[type=submit] {
-  padding: 8px;
+  padding: 10px;
+  background-color: #015249;
+  border-style: none;
+  border-radius: 2px;
+  color: white;
 }
 
 form input[type=number] {
@@ -160,7 +169,7 @@ form input[type=number] {
   /*margin: 12px auto;*/
   margin: 24px 0;
   padding: 12px;
-  border-bottom: 1px solid #ed6161;
+  border-bottom: 1px solid #57bc90;
 
 }
 
@@ -184,6 +193,9 @@ footer {
   text-indent: 5px;
   padding: 0;
   line-height: 30px;
+  border-style: none;
+  border: 1px solid #57bc90;
+  border-radius: 2px;
 }
 textarea {
   width: 400px;
@@ -191,4 +203,7 @@ textarea {
   resize: none;
   margin: 20px 0;
   text-indent: 5px;
+  border-style: none;
+  border: 1px solid #57bc90;
+  border-radius: 2px;
 }

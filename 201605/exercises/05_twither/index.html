@@ -2,27 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Example 04 - Twither</title>
+    <title>Twither</title>
     <!-- Common resources -->
     <link rel="stylesheet" href="../../common/css/normalize.css" media="screen">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../../common/css/app.css" media="screen">
     <script src="../../common/js/jquery-2.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
   </head>
   <body>
     <div id="main-content">
       <header>
-        <h1>Example 04 - Twither</h1>
+        <h1>TwitHer</h1>
       </header>
-      <main>
+      <main class="container">
         <p>
-          In this example, we are getting a list of tweets from our fancy new Twither application
+          Say something!
         </p>
 
         <form class="twither-form" action="/" method="post">
-          <input type="text" name="user-name" class="user-name" placeholder="your name">
-          <br>
-          <textarea placeholder="your tweet"></textarea>
-          <br>
+          <input type="text" name="user-name" class="user-name" placeholder="your name" pattern=".{5,}" required title="5 characters is minimum"/>
+          <br/>
+          <textarea placeholder="your tweet" maxlength="160" minlength="5" required></textarea>
+          <br/>
           <input id=submit type="submit" name="submit" value="Submit">
         </form>
 
